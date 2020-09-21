@@ -35,7 +35,7 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
     /* https://css-tricks.com/perfect-full-page-background-image/ */
-    background: url('background.jpg') no-repeat center center fixed; 
+    background: url('./img/background.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,6 +55,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    box-sizing: border-box;
     background: linear-gradient(135deg, rgba(29,185,84,1) 0%, rgba(0,0,0,1) 65%);
 }
 
@@ -102,6 +103,10 @@ a {
     background: rgba(0, 0, 0, 0.6);
 }
 
+#intro p {
+    padding: 0 15px;
+}
+
 #intro span {
     font-weight: 300;
     font-size: 12px;
@@ -142,6 +147,8 @@ iframe {
     background-color: #149441;
     padding: 85px 15px;
     margin-top: 200px;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top */
+    scroll-margin-top: 108px;
 }
 
 #about div {
@@ -150,15 +157,17 @@ iframe {
     text-align: center;
 }
 
+img {
+    max-width: 150px;
+}
+
 #contact {
     background-color: whitesmoke;
     color: black;
-    padding: 85px 15px 50px 15px;
+    padding: 85px 15px 35px 15px;
 }
 
 #contact div {
-    /* display: flex;
-    flex-direction: column; */
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -170,7 +179,37 @@ form {
     align-items: center;
 }
 
-label, #submit {
+label {
     margin-top: 15px;
 }
 
+button {
+    margin-top: 25px;
+    background-color: rgb(29,185,84);
+
+
+    padding: 5px 10px;
+    border: 5px rgb(29,185,84) solid;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .03s;
+}
+
+button:hover{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+input, textarea {
+    /* https://stackoverflow.com/questions/20175211/why-dont-textarea-and-input-elements-respect-max-width */
+    width:100%;
+    display:block;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+textarea {
+    text-align: left;
+}
