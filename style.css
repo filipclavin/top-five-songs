@@ -145,7 +145,7 @@ iframe {
 
 #about {
     background-color: #149441;
-    padding: 85px 15px;
+    padding: 70px 15px;
     margin-top: 200px;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top */
     scroll-margin-top: 108px;
@@ -164,10 +164,10 @@ img {
 #contact {
     background-color: whitesmoke;
     color: black;
-    padding: 85px 15px 35px 15px;
+    padding: 70px 15px 35px 15px;
 }
 
-#contact div {
+#contact-wrapper {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
@@ -207,9 +207,28 @@ input, textarea {
     display:block;
     text-align: center;
     flex-grow: 1;
-    max-width: 300px;
+}
+
+input {
+    max-width: 200px;
 }
 
 textarea {
+    max-width: 300px;
     text-align: left;
+}
+
+.bad-input {
+    background-color: rgba(255, 0, 0, 0.24);
+    border-color: rgb(187, 0, 0);
+}
+
+#error {
+    background-color: rgb(187, 0, 0);
+    color: whitesmoke;
+}
+
+#error.active {
+    margin-top: 15px;
+    padding: 3px 5px;
 }

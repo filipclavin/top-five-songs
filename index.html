@@ -7,6 +7,7 @@
     <meta name="description" content="My top 10 favorite songs compiled in a neat list with Spotify play buttons.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
@@ -55,23 +56,21 @@
             </div>
         </section>
         <section id="contact">
-            <div>
+            <div id="contact-wrapper">
                 <h2>Contact</h2><br>
                 <p>What do you think about my list? Do you like the songs? Hate them? Do you wish I would have ordered it differently? I'd love to hear your opinions, so please send me an email by filling out the form below:</p>
-                <form>
+                <form id="form" novalidate>
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" placeholder="John Smith">
                     <label for="mail">E-mail adress:</label>
                     <input type="email" name="mail" id="mail" placeholder="someone@example.com">
                     <label for="message">Message:</label>
                     <textarea name="message" id="message"placeholder="I hate this list. You have a trash taste in music."></textarea>
+                    <div id="error"></div>
                     <button type="submit">Send message</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer>
-
-    </footer>
 </body>
 </html>
