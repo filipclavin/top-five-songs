@@ -1,3 +1,5 @@
+//Guide: https://www.youtube.com/watch?v=In0nB0ABaUk
+
 const name = document.getElementById("name")
 const mail = document.getElementById("mail")
 const message = document.getElementById("message")
