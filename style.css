@@ -42,7 +42,7 @@ html {
     background-size: cover;
 }
 
-.example::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
   }
 
@@ -91,7 +91,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 200px 0;
+    padding: 200px 0 0;
     margin: 0 auto;
 }
 
@@ -117,11 +117,35 @@ a {
 .song {
     display: flex;
     align-items: flex-start;
-    margin-top: 400px;
     padding: 30px;
     max-width: 920px;
     flex-wrap: wrap;
     background: linear-gradient(135deg, rgba(29,185,84,1) 0%, rgba(0,0,0,1) 65%);
+    scroll-margin: 33vh;
+}
+
+@media only screen and (max-width: 418px) {
+    .song {
+        scroll-margin-top: 136px;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    .song {
+        scroll-margin-top: 184px;
+    }
+}
+
+@media only screen and (max-width: 265px) {
+    .song {
+        scroll-margin-top: 212px;
+    }
+}
+
+@media only screen and (max-width: 195px) {
+    .song {
+        scroll-margin-top: 240px;
+    }
 }
 
 .song p {
@@ -140,31 +164,94 @@ iframe {
     iframe {
         width: 80px;
         height: 80px;
+        margin-bottom: 10px;
     }
 }
 
 #about {
+    text-align: justify;
+    text-justify: auto;
     background-color: #149441;
-    padding: 70px 15px;
-    margin-top: 200px;
+    padding: 90px 15px 135px 15px;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin-top */
     scroll-margin-top: 108px;
+}
+
+@media only screen and (max-width: 487px) {
+    #about {
+        scroll-margin-top: 136px;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    #about {
+        scroll-margin-top: 184px;
+    }
+}
+
+@media only screen and (max-width: 265px) {
+    #about {
+        scroll-margin-top: 212px;
+    }
+}
+
+@media only screen and (max-width: 195px) {
+    #about {
+        scroll-margin-top: 240px;
+    }
 }
 
 #about div {
     max-width: 700px;
     margin: 0 auto;
+}
+
+#about h2 {
     text-align: center;
 }
 
-img {
-    max-width: 150px;
+#about img {
+    max-width: 200px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 0 25% 0 25%;
 }
 
 #contact {
     background-color: whitesmoke;
     color: black;
-    padding: 70px 15px 35px 15px;
+    padding: 100px 15px 70px 15px;
+    scroll-margin-top: 108px;
+}
+
+@media only screen and (max-height: 650px) {
+    #contact {
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 487px) {
+    #contact {
+        scroll-margin-top: 136px;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    #contact {
+        scroll-margin-top: 184px;
+    }
+}
+
+@media only screen and (max-width: 265px) {
+    #contact {
+        scroll-margin-top: 212px;
+    }
+}
+
+@media only screen and (max-width: 195px) {
+    #contact {
+        scroll-margin-top: 240px;
+    }
 }
 
 #contact-wrapper {
@@ -184,15 +271,13 @@ label {
 }
 
 button {
-    margin-top: 25px;
+    margin-top: 30px;
     background-color: rgb(29,185,84);
-
-
     padding: 5px 10px;
     border: 5px rgb(29,185,84) solid;
     border-radius: 25px;
     cursor: pointer;
-    transition: all .03s;
+    transition: all .05s;
 }
 
 button:hover{
@@ -231,4 +316,12 @@ textarea {
 #error.active {
     margin-top: 15px;
     padding: 3px 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-arrow {
+    margin: 120px 0;
 }
