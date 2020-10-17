@@ -1,4 +1,39 @@
-//Guide: https://www.youtube.com/watch?v=In0nB0ABaUk
+/* Fades elements in as they eneter the viewport. Based on https://www.dev-tips-and-tricks.com/animate-elements-scrolled-view-vanilla-js */
+
+(function() {
+    var elements
+    var windowHeight
+  
+    function init() {
+      elements = document.querySelectorAll('.hidden')
+      windowHeight = window.innerHeight
+    }
+  
+    function checkPosition() {
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i]
+        var positionFromTop = elements[i].getBoundingClientRect().top
+        var positionFromBottom = elements[i].getBoundingClientRect().bottom
+  
+        if (positionFromTop <= windowHeight) {
+          element.classList.add("fade-in-element")
+          element.classList.remove("hidden")
+        } else if (positionFromTop > windowHeight) {
+            element.classList.add("hidden")
+            element.classList.remove("fade-in-element" || positionFromBottom <= 0)
+        }
+      }
+    }
+  
+    window.addEventListener("scroll", checkPosition)
+    window.addEventListener("resize", init)
+  
+    init()
+    checkPosition()
+})()
+  
+
+/* Form validation, based on https://www.youtube.com/watch?v=In0nB0ABaUk */
 
 const name = document.getElementById("name")
 const mail = document.getElementById("mail")
@@ -38,3 +73,4 @@ form.addEventListener("submit", (e) => {
         errorElement.innerHTML = errors.join("")
     }
 })
+
