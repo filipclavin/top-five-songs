@@ -18,9 +18,9 @@
         if (positionFromTop <= windowHeight) {
           element.classList.add("fade-in-element");
           element.classList.remove("hidden");
-        } else if (positionFromTop > windowHeight) {
+        } else if (positionFromTop > windowHeight || positionFromBottom <= 0) {
             element.classList.add("hidden");
-            element.classList.remove("fade-in-element" || positionFromBottom <= 0);
+            element.classList.remove("fade-in-element");
         }
       }
     }
